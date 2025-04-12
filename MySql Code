@@ -1,0 +1,28 @@
+show databases;
+create database jan_project_day_1;
+use jan_project_day_1;
+
+CREATE TABLE cust_details (
+    cust_id INT AUTO_INCREMENT PRIMARY KEY,
+    cust_name VARCHAR(100),
+    cust_address VARCHAR(255),
+    cust_ph_no VARCHAR(10),
+    user_id VARCHAR(50),
+    password VARCHAR(50)
+) AUTO_INCREMENT=1;
+
+INSERT INTO cust_details (cust_name, cust_address, cust_ph_no, user_id, password)
+VALUES (
+    'Ravi Kumar',
+    '123, Park Street, Kolkata',
+    '9876543210',
+    'ravi.kumar',
+    'pass@123'
+);
+select * from cust_details;
+
+truncate table cust_details;
+
+select * from cust_details where user_id ='R@123';
+select * from cust_details WHERE user_id=R@123
+select * from cust_details WHERE user_id='R@123'
